@@ -1,0 +1,48 @@
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link href="{% static 'bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <style>
+    th,table,tr,td{
+        border: 2px solid white;
+        color: wheat;
+    }
+   
+   </style>
+</head>
+<body>
+    <section>
+        <div class="container mt-5 ">
+            <table class="table" >
+                <thead >
+                  <tr >
+                    
+                    <th onclick="sortTable(1)" >Product name </th>
+                    <th>Volume </th>
+                    <th>Market-capital </th>
+                    <th>Credit-rating </th>         
+                  </tr>
+                </thead>
+                <tbody>     
+                  {% for product in prodobj %}
+                  <tr >
+                    
+                    <td>{{ product.product_name }}</td>
+                    <td>{{ product.volume }}</td>
+                    <td>{{ product.market_capital }}</td>
+                    <td>{{ product.credit_rating }}</td>
+                  </tr>
+                  {% endfor %}         
+                </tbody>
+              </table>
+        <a href="./" style="float: right;"><button type="submit" class="btn btn-dark px-4 ">HOME</button></a>
+        </div>
+    </section>
+</body>
+</html>

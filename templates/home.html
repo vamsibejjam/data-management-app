@@ -1,0 +1,97 @@
+<html lang="en">
+    {% load static %}
+<head>
+
+    <meta  charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link href="{% static 'bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+   <script>
+            {% for i in messages %}
+            alert('{{i}}');
+            {% endfor %}
+          </script>
+
+</head>
+<body onload="magic()">
+          
+          <section id="main" >
+            <div class="container  mt-5 ">
+              <h3 id="title">Client - Server Application</h3>
+               <form class="d-flex justify-content-center align-items-center  " id="bro" action="{% url 'home' %}"method="post" >
+                {% csrf_token %}
+                <div class="row mx-3 " >
+                  <div class="form-group   col-sm-6 col-lg-3 col-md-3 ">
+                    <label for="product-name">Product name</label>
+                    <input class="form-control"  type="text" id="product-name" name="product" placeholder="Enter product name"   required  >
+                  </div> 
+                  <div class="form-group   col-sm-6 col-lg-3 col-md-3">
+                    <label for="volume">Volume</label>
+                    <input type="text" class="form-control" id="volume" name="vol" placeholder="Enter volume" required>
+                  </div>
+                  <div class="form-group    col-sm-6 col-lg-3 col-md-3">
+                    <label for="market-capital">Market-capital</label>
+                    <input type="text" class="form-control" id="market-capital" name="capital" placeholder="Enter Market capital" required>
+                  </div>
+                  <div class="form-group   col-sm-6 col-lg-3 col-md-3">
+                    <label for="credit-rating">Credit rating</label>
+                    <input type="text" class="form-control" id="credit-rating" name="rating" placeholder="Enter Credit rating" required>
+                  </div>
+                  <div class="form-group   col-sm-6  col-lg-2 col-md-3" ><button id="add"  class="btn btn-dark px-4 ">Add</button> </div>
+                  
+                  <div class="form-group   col-sm-6  col-lg-2 col-md-3"><a href="./" class="btn btn-dark px-4">Reset</a>  </div>
+
+                 <div class="form-group   col-sm-6 col-lg-2 col-md-3"><button id="updat"   class="btn btn-dark px-3  ">Update</button> </div>
+                
+                </div>
+               
+               </form>
+
+
+
+  <div class="row  px-3" >
+      <div class="col-lg-10 col-md-12 p-4 ">
+              <table class="table   " id="table1" >
+                <thead>
+                  <tr >
+                    
+                    <th onclick="sortTable(0)" >Product name <span  class="bi bi-arrow-down-up " style=" color: rgb(0, 0, 0);font-style:bold"></span></th>
+                    <th>Volume <span  class="bi bi-arrow-down-up " style=" color: rgb(0, 0, 0);font-style:bold"></span></th>
+                    <th>Market-capital <span  class="bi bi-arrow-down-up " style=" color: rgb(0, 0, 0);font-style:bold"></span></th>
+                    <th>Credit-rating <span  class="bi bi-arrow-down-up " style=" color: rgb(0, 0, 0);font-style:bold"></span></th>
+             
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  {% for product in prodobj %}
+                  <tr ondblclick="edit(this)" onclick="selector(this)">
+                    
+                    <td>{{ product.product_name }}</td>
+                    <td>{{ product.volume }}</td>
+                    <td>{{ product.market_capital }}</td>
+                    <td>{{ product.credit_rating }}</td>
+                  </tr>
+                  
+                  {% endfor %}
+                  
+                </tbody>
+              </table>
+          </div>
+              
+            
+      </div> 
+              <div class="d-flex justify-content-end  p-3 ">
+                 <a href="/data"><button type="submit" class="btn btn-dark px-4   mx-2" >Save</button></a>
+               <a href="" id="anchor2"><button type="submit"    class="btn btn-dark px-4  mx-2 ">Delete</button></a> 
+              </div>
+            </div>   
+          </section>
+          
+          
+</body>
+</html>

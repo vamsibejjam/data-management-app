@@ -1,0 +1,69 @@
+body{
+  background-image: url("../image/abstract1.jpg");
+  background-size: cover;
+}
+
+#main .container{
+  color: white;
+  background-color:  #34568B;
+  border-radius: 10px;
+}
+
+#main .form-group{
+  text-align: center; 
+  font-weight: bold;
+  padding: 10;
+  margin-top: 25px;
+  
+  }
+
+#title{
+  position: relative;
+  text-align: center;
+  font-family: Verdana Bold;
+  color: white;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+ 
+
+}
+.container{
+  border: 2pxsolid yellow;
+}
+  
+
+#middle{
+  position: relative;
+  bottom: 63px;
+  padding: 0px;
+  text-align:end;
+}
+
+
+#main .container table, th, td {
+      border: 2px solid rgb(46, 46, 46);
+      border-style:ridge;     
+      text-align: center;   
+    }
+
+#main .container .table th{
+      text-align: center;    
+      color: white;
+      cursor: pointer;
+      background-color: #955251;     
+    }
+
+#main .container table{    
+      margin-left: 20px;
+      background-color: DFCFBE;
+      color: black;
+    }
+    
+
+    
+
+
+
+
+

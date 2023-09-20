@@ -1,0 +1,70 @@
+body{
+  background-image: url("../image/abstract1.jpg");
+  background-size: cover;
+}
+
+#title{
+  background-color: #955251;
+  text-align: center;
+  font-family: Franklin Gothic;
+  color: white;
+  width:max-content;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 3px;
+}
+
+#main .container{
+  color: white;
+  background-color:  #34568B;
+  border-radius: 10px;
+  padding: 0px;
+}
+
+#main .form-group{
+  text-align: center;  
+  padding: 10px;
+  margin-top: 20px; 
+  }
+
+  #main .form-group input{
+    text-align: center;  
+    }
+
+#main .form-group label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    color: wheat;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+#main .container .table, th, td {
+      border: 2px solid #955251;
+      border-style:ridge;    
+      text-align: center;   
+    }
+
+#main .container .table th{
+      text-align: center;    
+      color: white;
+      cursor: pointer;
+      background-color: #955251;     
+    }
+
+#main .container .table{   
+      border: 5px solid #955251; 
+      border-style:ridge;
+      align-items: center;
+      background-color: DFCFBE;
+      color: black;
+    }
+    
+
+    
+
+
+
+
+
